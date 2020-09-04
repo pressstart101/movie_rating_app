@@ -1,7 +1,7 @@
 """Models for movie ratings app."""
 
 from flask_sqlalchemy import SQLAlchemy
-
+from datetime import datetime
 db = SQLAlchemy()
 
 
@@ -40,7 +40,6 @@ class Movie(db.Model):
 
     def __repr__(self):
         return f'<Movie movie_id{self.movie_id} title={self.title}>'
-
 
 class Rating(db.Model):
     """A rating."""
